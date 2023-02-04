@@ -1,5 +1,5 @@
 The Modern Developer Youtube Channel
 
-React MERN Full Stack App
+React MERN Full Stack App Tutorial
 
-EP1_2 - Setting up the backend (Express and CORS)
+EP1_2 - Setting up the Backend (Express and CORS)
