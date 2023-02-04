@@ -47,6 +47,7 @@ const UsersList = () => {
       </table>
     );
   }
+  return content;
 };
 
 export default UsersList;
