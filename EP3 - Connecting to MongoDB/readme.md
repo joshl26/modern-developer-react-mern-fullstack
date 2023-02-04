@@ -2,4 +2,4 @@ The Modern Developer Youtube Channel
 
 React MERN Full Stack App
 
-EP1_2 - Setting up the backend (Express and CORS)
+EP3 - Connecting to MongoDB
