@@ -1,5 +1,4 @@
 import { createSelector, createEntityAdapter } from "@reduxjs/toolkit";
-import { buildQueryLifecycleHandler } from "@reduxjs/toolkit/dist/query/core/buildMiddleware/queryLifecycle";
 
 import { apiSlice } from "../../app/api/apiSlice";
 
