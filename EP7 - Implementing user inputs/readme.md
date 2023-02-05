@@ -2,4 +2,4 @@ The Modern Developer Youtube Channel
 
 React MERN Full Stack App
 
-EP6 - Working with REdux and RTK Query
+EP7 - Implementing user inputs
