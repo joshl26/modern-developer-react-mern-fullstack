@@ -1,5 +1,6 @@
 {
-  "name": "creating_the_frontend_with_react",
+  "name": "frontend",
+  "description": "Implementing user inputs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

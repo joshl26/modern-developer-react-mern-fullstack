@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Adding Rouing",
+  "description": "Implementing user inputs",
   "main": "server.js",
   "scripts": {
     "start": "node server",
