@@ -16,3 +16,4 @@ EP7 - Implementing user inputs
 
 EP8 - Authentication and Authorization
 
+EP9 - Login Authentication with Redux
