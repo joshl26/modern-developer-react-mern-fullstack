@@ -13,3 +13,6 @@ EP 5 - Creating the Frontend with React
 EP 6 - Working with React and Redux
 
 EP7 - Implementing user inputs
+
+EP8 - Authentication and Authorization
+
