@@ -19,3 +19,5 @@ EP8 - Authentication and Authorization
 EP9 - Login Authentication with Redux
 
 EP10 - Persist Login Authentication on Refresh
+
+EP11 - Role Based Authorization
