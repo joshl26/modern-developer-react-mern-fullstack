@@ -5,8 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectNoteById } from "./notesApiSlice";
 
-import React from "react";
-
 const Note = ({ noteId }) => {
   const note = useSelector((state) => selectNoteById(state, noteId));
 

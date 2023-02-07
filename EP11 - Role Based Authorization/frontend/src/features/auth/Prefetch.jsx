@@ -4,21 +4,18 @@ import { usersApiSlice } from "../users/usersApiSlice";
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 
-import React from "react";
-
 const Prefetch = () => {
-  const notes = store.dispatch(notesApiSlice.endpoints.getNotes.initiate());
-  const users = store.dispatch(usersApiSlice.endpoints.getUsers.initiate());
-
   useEffect(() => {
     console.log("subscribing");
+    const notes = store.dispatch(notesApiSlice.endpoints.getNotes.initiate());
+    const users = store.dispatch(usersApiSlice.endpoints.getUsers.initiate());
 
     return () => {
       console.log("unsubscribing");
       notes.unsubscribe();
       users.unsubscribe();
     };
-  }, [notes, users]);
+  }, []);
 
   return <Outlet />;
 };

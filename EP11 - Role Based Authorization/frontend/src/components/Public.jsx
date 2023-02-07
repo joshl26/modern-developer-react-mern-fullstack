@@ -12,8 +12,8 @@ const Public = () => {
       </header>
       <main className="public__main">
         <p>
-          Located in Beautiful Akron, Ohio. Our trained staff are ready to meet
-          your needs.
+          Located in Beautiful Beverly Hills California. Our trained staff are
+          ready to meet your needs.
         </p>
         <address className="public__addr">
           My Business

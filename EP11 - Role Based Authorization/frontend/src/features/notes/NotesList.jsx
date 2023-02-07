@@ -1,4 +1,3 @@
-import React from "react";
 import { useGetNotesQuery } from "./notesApiSlice";
 import Note from "./Note";
 import useAuth from "../../hooks/useAuth";
@@ -44,7 +43,7 @@ const NotesList = () => {
       filteredIds.map((noteId) => <Note key={noteId} noteId={noteId} />);
     content = (
       <table className="table table--notes">
-        <thead className="table__head">
+        <thead className="table__thead">
           <tr>
             <th scope="col" className="table__th note__status">
               Username

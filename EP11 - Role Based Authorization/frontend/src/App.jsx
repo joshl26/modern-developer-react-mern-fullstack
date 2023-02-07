@@ -23,8 +23,7 @@ function App() {
         <Route index element={<Public />} />
         <Route path="login" element={<Login />} />
 
-        {/* protected routes */}
-
+        {/* Protected Routes */}
         <Route element={<PersistLogin />}>
           <Route
             element={<RequireAuth allowedRoles={[...Object.values(ROLES)]} />}
@@ -40,8 +39,8 @@ function App() {
                 >
                   <Route path="users">
                     <Route index element={<UsersList />} />
-                    <Route path=":id" element={<EditUser />}></Route>
-                    <Route path="new" element={<NewUserForm />}></Route>
+                    <Route path=":id" element={<EditUser />} />
+                    <Route path="new" element={<NewUserForm />} />
                   </Route>
                 </Route>
 
@@ -51,11 +50,11 @@ function App() {
                   <Route path="new" element={<NewNote />} />
                 </Route>
               </Route>
+              {/* End Dash */}
             </Route>
           </Route>
         </Route>
-
-        {/* end of protected routes */}
+        {/* End Protected Routes */}
       </Route>
     </Routes>
   );

@@ -72,7 +72,6 @@ const EditUserForm = ({ user }) => {
   const options = Object.values(ROLES).map((role) => {
     return (
       <option key={role} value={role}>
-        {" "}
         {role}
       </option>
     );

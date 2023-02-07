@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -45,7 +44,7 @@ const DashHeader = () => {
     !NOTES_REGEX.test(pathname) &&
     !USERS_REGEX.test(pathname)
   ) {
-    dashClass = "dash-header__containber--small";
+    dashClass = "dash-header__container--small";
   }
 
   let newNoteButton = null;

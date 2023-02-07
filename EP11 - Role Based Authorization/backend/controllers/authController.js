@@ -74,7 +74,9 @@ const refresh = (req, res) => {
     asyncHandler(async (err, decoded) => {
       if (err) return res.status(403).json({ message: "Forbidden" });
 
-      const foundUser = await User.findOne({ username: decoded.username });
+      const foundUser = await User.findOne({
+        username: decoded.username,
+      }).exec();
 
       if (!foundUser) return res.status(401).json({ message: "Unauthorized" });
 
@@ -100,7 +102,7 @@ const logout = (req, res) => {
   const cookies = req.cookies;
   if (!cookies?.jwt) return res.sendStatus(204); //No content
   res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true });
-  res.json({ message: "Cookies cleared" });
+  res.json({ message: "Cookie cleared" });
 };
 
 module.exports = {
