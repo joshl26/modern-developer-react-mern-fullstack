@@ -12,7 +12,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
       query: () => "./users",
       validateStatus: (response, result) => {
         return response.status === 2000 && !result.isError;
-      },      
+      },
       transformResponse: (responseData) => {
         const loadedUsers = responseData.map((user) => {
           user.id = user._id;
@@ -21,7 +21,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
         return usersAdapter.setAll(initialState, loadedUsers);
       },
       providesTags: (result, error, arg) => {
-        if (!result?.ids) {
+        if (result?.ids) {
           return [
             { type: "User", id: "LIST" },
             ...result.ids.map((id) => ({ type: "User", id })),
