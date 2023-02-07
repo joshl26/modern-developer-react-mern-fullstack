@@ -12,7 +12,7 @@ export const authApiSlice = apiSlice.injectEndpoints({
     }),
     sendLogout: builder.mutation({
       query: () => ({
-        url: "./suth/logout",
+        url: "/auth/logout",
         method: "POST",
       }),
       async onQueryStarted(arg, { dispatch, queryFulfilled }) {
@@ -36,4 +36,5 @@ export const authApiSlice = apiSlice.injectEndpoints({
   }),
 });
 
-export const { useLoginMutation, useSendLogoutMutation, useRefreshMutation } = authApiSlice;
+export const { useLoginMutation, useSendLogoutMutation, useRefreshMutation } =
+  authApiSlice;
