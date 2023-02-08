@@ -12,7 +12,7 @@ const PersistLogin = () => {
 
   const [trueSuccess, setTrueSuccess] = useState(false);
 
-  const [refresh, { isUnitialized, isLoading, isSuccess, isError, error }] =
+  const [refresh, { isUninitialized, isLoading, isSuccess, isError, error }] =
     useRefreshMutation();
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const PersistLogin = () => {
         try {
           //const response =
           await refresh();
-          //const {sccessToken} = response.data
+          //const {accessToken} = response.data
           setTrueSuccess(true);
         } catch (err) {
           console.group(err);
@@ -60,10 +60,10 @@ const PersistLogin = () => {
     //persist: yes, token: yes
     console.log("success");
     content = <Outlet />;
-  } else if (token && isUnitialized) {
+  } else if (token && isUninitialized) {
     //persist: yes, token: yes
     console.log("token and uninit");
-    console.log(isUnitialized);
+    console.log(isUninitialized);
     content = <Outlet />;
   }
   return content;

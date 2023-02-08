@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faRightFromBracket,
+  faFileCirclePlus,
   faFilePen,
   faUserGear,
   faUserPlus,
-  faFileCirclePlus,
+  faRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 
@@ -35,10 +35,7 @@ const DashHeader = () => {
   const onNotesClicked = () => navigate("/dash/notes");
   const onUsersClicked = () => navigate("/dash/users");
 
-  const onLogoutClicked = () => sendLogout();
-
   let dashClass = null;
-
   if (
     !DASH_REGEX.test(pathname) &&
     !NOTES_REGEX.test(pathname) &&
@@ -48,7 +45,6 @@ const DashHeader = () => {
   }
 
   let newNoteButton = null;
-
   if (NOTES_REGEX.test(pathname)) {
     newNoteButton = (
       <button
@@ -62,7 +58,6 @@ const DashHeader = () => {
   }
 
   let newUserButton = null;
-
   if (USERS_REGEX.test(pathname)) {
     newUserButton = (
       <button
@@ -76,7 +71,6 @@ const DashHeader = () => {
   }
 
   let userButton = null;
-
   if (isManager || isAdmin) {
     if (!USERS_REGEX.test(pathname) && pathname.includes("/dash")) {
       userButton = (
@@ -88,19 +82,16 @@ const DashHeader = () => {
   }
 
   let notesButton = null;
-
-  if (isManager || isAdmin) {
-    if (!NOTES_REGEX.test(pathname) && pathname.includes("/dash")) {
-      notesButton = (
-        <button className="icon-button" title="Notes" onClick={onNotesClicked}>
-          <FontAwesomeIcon icon={faFilePen} />
-        </button>
-      );
-    }
+  if (!NOTES_REGEX.test(pathname) && pathname.includes("/dash")) {
+    notesButton = (
+      <button className="icon-button" title="Notes" onClick={onNotesClicked}>
+        <FontAwesomeIcon icon={faFilePen} />
+      </button>
+    );
   }
 
   const logoutButton = (
-    <button className="icon-button" title="Logout" onClick={onLogoutClicked}>
+    <button className="icon-button" title="Logout" onClick={sendLogout}>
       <FontAwesomeIcon icon={faRightFromBracket} />
     </button>
   );
@@ -125,17 +116,18 @@ const DashHeader = () => {
   const content = (
     <>
       <p className={errClass}>{error?.data?.message}</p>
+
       <header className="dash-header">
         <div className={`dash-header__container ${dashClass}`}>
           <Link to="/dash">
-            <h1 className="dash-header__title">My Notes</h1>
+            <h1 className="dash-header__title">techNotes</h1>
           </Link>
+          <nav className="dash-header__nav">{buttonContent}</nav>
         </div>
-        <nav className="dash-header__nav">{buttonContent}</nav>
       </header>
     </>
   );
+
   return content;
 };
-
 export default DashHeader;
