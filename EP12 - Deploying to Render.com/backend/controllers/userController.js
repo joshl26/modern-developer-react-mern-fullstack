@@ -7,7 +7,7 @@ const bcrypt = require("bcrypt");
 // @route GET /users
 // @access Private
 const getAllUsers = asyncHandler(async (req, res) => {
-  const users = await User.find().select("-pasword").lean();
+  const users = await User.find().select("-password").lean();
   if (!users?.length) {
     return res.status(400).json({ message: "No users found" });
   }
@@ -62,7 +62,9 @@ const updateUser = asyncHandler(async (req, res) => {
     !roles.length ||
     typeof active !== "boolean"
   ) {
-    return res.status(400).json({ message: "All fields except password are required" });
+    return res
+      .status(400)
+      .json({ message: "All fields except password are required" });
   }
 
   const user = await User.findById(id).exec();
