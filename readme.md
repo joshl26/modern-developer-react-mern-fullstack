@@ -12,7 +12,7 @@ EP1 and 2 - Setting up the Backend (Express and CORS)
 
 EP3 - Connecting to Mongo DB
 
-Ep4 - Adding Routes to The Backend
+EP4 - Adding Routes to The Backend
 
 EP5 - Creating the Frontend with React
 
