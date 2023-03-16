@@ -36,35 +36,6 @@ EP11 - Role Based Authorization
 ### ✨ [Live Demo](https://mern-test-frontend-vzc1.onrender.com)
 
 
-## Prerequisites
-
-
-- npm >=8.0.0
-  
-- node >=17.0.0
-      
-## Install
-
-```sh
-npm install
-```
-
-
-## Usage
-
-```sh
-npm run start
-```
-
-
-## Run tests
-
-```sh
-npm run test
-```
-
-
-
 ## Author
 👤 **Joshua Lehman**
 
