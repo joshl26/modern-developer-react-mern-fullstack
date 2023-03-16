@@ -28,6 +28,8 @@ EP10 - Persist Login Authentication on Refresh
 
 EP11 - Role Based Authorization
 
+EP12 - Deploying to Render.com
+
 </p>
 
 ### 🏠 [Project Homepage](https://github.com/joshl26/modern-developer-react-mern-fullstack#readme)
